@@ -1,69 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Anaswara Anil | Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 900px; margin: auto; padding: 20px; line-height: 1.6; }
-    h1, h2 { color: #1a202c; }
-    ul { padding-left: 20px; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    th { background-color: #f3f3f3; }
-  </style>
+    <meta charset="UTF-8">
+    <title>Anaswara Anil | Cybersecurity Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
+            background: linear-gradient(to right, #f4f6ff, #eef1ff);
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2b2e4a, #4a69bd);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #4a69bd;
+            border-bottom: 2px solid #4a69bd;
+            padding-bottom: 8px;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #4a69bd;
+            color: white;
+            padding: 8px 14px;
+            margin: 6px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            margin-bottom: 5px;
+            color: #2b2e4a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2b2e4a;
+            color: white;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #4a69bd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Anaswara Anil</h1>
-<p><strong>MSc Cybersecurity & Digital Forensics</strong></p>
-<p>Hands-on experience in network security, threat detection, digital forensics, and secure investigation methodologies.</p>
+<header>
+    <h1>Anaswara Anil</h1>
+    <p>Cybersecurity & Digital Forensics Postgraduate</p>
+</header>
 
-<h2>Contact</h2>
-<p>Email: <a href="mailto:anaswarasankeerthanam@gmail.com">anaswarasankeerthanam@gmail.com</a><br>
-LinkedIn: <a href="https://linkedin.com/in/anaswara-anil-512417338">linkedin.com/in/anaswara-anil-512417338</a><br>
-GitHub: <a href="https://github.com/anaswara">github.com/anaswara</a></p>
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a postgraduate student specializing in Cybersecurity and Digital Forensics.
+        I have hands-on experience in security tools, forensic analysis, and academic security projects.
+        My interests lie in blue team security, digital investigations, and secure system design.
+    </p>
+</section>
 
-<h2>Technical Skills</h2>
-<ul>
-  <li>Python, C++, Bash, HTML/CSS/JS</li>
-  <li>Tools: Nmap, Wireshark, Metasploit, Netreaper, Autopsy, Splunk, Volatility, Burp Suite, KF Sensor, Process Hacker</li>
-  <li>Platforms: Linux (Kali, Ubuntu), VS Code, Git, MySQL</li>
-  <li>Concepts: Incident Response, Risk Assessment, Vulnerability Management, Secure App Development</li>
-</ul>
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Cyber Forensics</span>
+        <span>Incident Response</span>
+        <span>Wireshark</span>
+        <span>Nmap</span>
+        <span>Autopsy</span>
+        <span>FTK Imager</span>
+        <span>Python</span>
+        <span>Linux (Kali)</span>
+    </div>
+</section>
 
-<h2>Academic Projects</h2>
-<table>
-  <tr>
-    <th>Project</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>Face Detection & Image Comparison</td>
-    <td>Python-based system using OpenCV and Haar Cascade for face detection and image comparison.</td>
-  </tr>
-  <tr>
-    <td>File Integrity Checker</td>
-    <td>Monitors files/directories using SHA-256 hashing to detect unauthorized modifications.</td>
-  </tr>
-  <tr>
-    <td>Intrusion Detection System (Camera-Based)</td>
-    <td>Detects and logs unauthorized access using camera monitoring.</td>
-  </tr>
-  <tr>
-    <td>Movie Watching Website</td>
-    <td>Interactive frontend-based web application simulating a streaming platform.</td>
-  </tr>
-</table>
+<section>
+    <h2>Projects</h2>
 
-<h2>Certifications</h2>
-<ul>
-  <li>CompTIA Security+ (SY0-701)</li>
-  <li>Google Cybersecurity Professional Certificate</li>
-  <li>Microsoft Cybersecurity Analyst</li>
-  <li>Networking Basics</li>
-</ul>
+    <div class="project">
+        <h3>File Integrity Checker</h3>
+        <p>
+            A Python-based security tool that detects unauthorized file modifications
+            using cryptographic hash comparison and baseline monitoring.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>Face Detection and Image Comparison</h3>
+        <p>
+            An OpenCV-based project using Haar Cascade for face detection and basic
+            image comparison, integrated with a Flask web interface.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>Intrusion Detection System (Camera-Based)</h3>
+        <p>
+            Academic project designed to detect unauthorized access using camera input
+            for physical security monitoring.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Certifications</h2>
+    <ul>
+        <li>CompTIA Security+</li>
+        <li>Google Cybersecurity Professional Certificate</li>
+        <li>Microsoft Cybersecurity Analyst</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: anaswarasankeerthanam@gmail.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">View Profile</a></p>
+    <p>GitHub: <a href="https://github.com/anaswara-2002" target="_blank">github.com/anaswara-2002</a></p>
+</section>
+
+<footer>
+    © 2025 Anaswara Anil | Cybersecurity Portfolio
+</footer>
 
 </body>
 </html>
