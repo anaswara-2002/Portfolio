@@ -19,17 +19,24 @@
             max-width: 900px;
             margin: auto;
             background-color: #ffffff;
-            padding: 50px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
+            padding: 45px;
         }
 
         h1 {
-            font-size: 34px;
-            margin-bottom: 8px;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 40px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 6px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
         }
 
         .subtitle {
@@ -37,37 +44,18 @@
             color: #374151;
         }
 
-        h2 {
-            font-size: 22px;
-            margin-top: 45px;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 6px;
-        }
-
-        h3 {
-            font-size: 18px;
-            margin-bottom: 4px;
-        }
-
-        p {
-            margin-top: 8px;
-            margin-bottom: 8px;
-        }
-
         ul {
-            margin-top: 8px;
-            margin-left: 22px;
+            margin-left: 20px;
         }
 
         .project {
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .tech {
             font-style: italic;
             color: #374151;
             font-size: 14px;
-            margin-bottom: 6px;
         }
 
         a {
@@ -80,7 +68,7 @@
         }
 
         footer {
-            margin-top: 60px;
+            margin-top: 50px;
             text-align: center;
             font-size: 14px;
             color: #6b7280;
@@ -91,53 +79,51 @@
 <body>
 <div class="container">
 
-    <header>
-        <h1>Anaswara Anil</h1>
-        <p class="subtitle">
-            MSc Computer Science (Information Security & Cyber Forensics)<br>
-            Cybersecurity Fresher | Digital Forensics | Python
-        </p>
-    </header>
+    <h1>Anaswara Anil</h1>
+    <p class="subtitle">
+        MSc Computer Science (Information Security & Cyber Forensics)<br>
+        Cybersecurity Fresher | Python | Digital Forensics
+    </p>
 
     <p>
-        I am a postgraduate student specializing in Information Security and Cyber Forensics,
-        with a strong interest in practical cybersecurity implementations, digital investigations,
-        and secure system design through hands-on academic projects.
+        I am a postgraduate student specializing in Information Security and Cyber Forensics.
+        I focus on building practical, security-oriented applications and understanding real-world
+        security problems through hands-on academic projects.
     </p>
 
     <h2>Education</h2>
     <p>
         <strong>MSc Computer Science (Information Security & Cyber Forensics)</strong><br>
-        Rathinam College of Arts and Science,Coimabatore
+        Bharathiar University
     </p>
     <p>
         <strong>BSc Cyber Forensics</strong><br>
-        Indira Gandhi College of Arts and Science,Kothamangalam
+        Mahatma Gandhi University
     </p>
 
     <h2>Technical Skills</h2>
     <ul>
-        <li><strong>Programming:</strong> Python, C, C++, Bash</li>
-        <li><strong>Cybersecurity & Forensic Tools:</strong> Nmap, Wireshark, Autopsy, FTK Imager,Burp Suite, Splunk</li>
-        <li><strong>Technologies:</strong> OpenCV, Flask (basic), Git</li>
-        <li><strong>Operating Systems:</strong> Windows, Linux (Kali Linux)</li>
+        <li>Programming Languages: Python, C, C++</li>
+        <li>Cybersecurity & Forensic Tools: Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk</li>
+        <li>Technologies: OpenCV, Flask (basic), Git</li>
+        <li>Operating Systems: Windows, Linux (Kali Linux)</li>
     </ul>
 
     <h2>Frameworks & Standards</h2>
-    <ul>
-        <li>
-            <strong>NIST Cybersecurity Framework (CSF)</strong> – Applied in academic projects
-            for risk identification, detection, logging, and incident response alignment
-        </li>
-        <li>
-            <strong>CIS Critical Security Controls</strong> – Conceptual understanding of
-            baseline security controls and system hardening practices
-        </li>
-        <li>
-            <strong>ISO/IEC 27001</strong> – Awareness of Information Security Management System
-            (ISMS) concepts and security policy structure
-        </li>
-    </ul>
+<ul>
+    <li>
+        <strong>NIST Cybersecurity Framework (CSF)</strong> – Applied in academic projects
+        for risk identification, detection, logging, and incident response alignment
+    </li>
+    <li>
+        <strong>CIS Critical Security Controls</strong> – Conceptual understanding of
+        baseline security controls and system hardening practices
+    </li>
+    <li>
+        <strong>ISO/IEC 27001</strong> – Awareness of Information Security Management System
+        (ISMS) concepts and security policy structure
+    </li>
+</ul>
 
     <h2>Academic & Security Projects</h2>
 
@@ -146,18 +132,21 @@
         <p class="tech">Python, OpenCV (Haar Cascade), Logging</p>
         <p>
             Developed a camera-based intrusion detection system that continuously scans individuals
-            using face detection techniques. Authorized users are verified, while unauthorized access
-            triggers alerts. All scan events and intrusion attempts are recorded in log files to
-            support monitoring and analysis.
+            using face detection techniques. The system verifies whether the detected person is authorized;
+            if an unauthorized individual is detected, an alert is generated.
+            All scanning activities and intrusion attempts are recorded in log files for monitoring
+            and analysis. This project demonstrates the application of computer vision in physical
+            security and access control.
         </p>
     </div>
 
     <div class="project">
         <h3>File Integrity Checker</h3>
-        <p class="tech">Python, SHA-256 Hashing, JSON</p>
+        <p class="tech">Python, Hashing (SHA-256), JSON</p>
         <p>
-            Implemented a file integrity monitoring tool that generates baseline cryptographic hashes
-            and detects unauthorized file changes by comparing current file states against stored values.
+            Implemented a file integrity monitoring tool that creates a baseline of cryptographic hashes
+            and detects unauthorized file modifications by comparing current file states with stored values.
+            The project focuses on integrity verification and basic incident detection.
         </p>
     </div>
 
@@ -165,31 +154,32 @@
         <h3>Complaint Registration Application</h3>
         <p class="tech">Python, Flask, SQLite</p>
         <p>
-            Developed a web-based complaint registration system enabling users to submit complaints,
-            store structured data, and track records through a simple backend-driven application.
+            Designed and developed a web-based complaint registration system that allows users to submit
+            complaints, store structured data, and track complaint records.
+            The application demonstrates backend logic, form handling, and database integration.
         </p>
     </div>
 
-    <h2>Internship Experience</h2>
+   <h2>Internship Experience</h2>
 
-    <p>
-        <strong>Cyber Forensics Intern</strong><br>
-        Centre for Development of Advanced Computing (C-DAC)
-    </p>
-    <ul>
-        <li>Digital forensic analysis using Autopsy and FTK Imager</li>
-        <li>Network and web traffic analysis using Wireshark, Splunk, and Burp Suite</li>
-    </ul>
+<p>
+    <strong>Cyber Forensics Intern</strong><br>
+    Centre for Development of Advanced Computing (C-DAC)
+</p>
+<ul>
+    <li>Performed digital forensic analysis using Autopsy and FTK Imager</li>
+    <li>Conducted network and web traffic analysis using Wireshark, Splunk, Burp Suite and Netreaper</li>
+</ul>
 
-    <p>
-        <strong>Crime Branch Intern (14 Days)</strong><br>
-        Kerala Police – Crime Branch
-    </p>
-    <ul>
-        <li>Observed criminal investigation procedures and documentation workflows</li>
-        <li>Exposure to digital evidence handling and cyber forensic practices</li>
-        <li>Understanding of legal procedures including chain of custody</li>
-    </ul>
+<p>
+    <strong>Crime Branch Intern (14 Days)</strong><br>
+    Kerala Police – Crime Branch
+</p>
+<ul>
+    <li>Observed criminal investigation procedures and case documentation workflows</li>
+    <li>Gained exposure to digital evidence handling and basic cyber forensic practices</li>
+    <li>Understood legal aspects such as chain of custody and evidence preservation</li>
+</ul>
 
     <h2>Certifications</h2>
     <ul>
@@ -200,14 +190,9 @@
 
     <h2>Contact</h2>
     <p>
-        GitHub:
-        <a href="https://github.com/anaswara-2002" target="_blank">
-            github.com/anaswara-2002
-        </a><br>
-        LinkedIn:
-        <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">
-            linkedin.com/in/anaswara-anil-512417338
-        </a><br>
+        GitHub: <a href="https://github.com/anaswara-2002" target="_blank">github.com/anaswara-2002</a><br>
+        LinkedIn: <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">
+        linkedin.com/in/anaswara-anil-512417338</a><br>
         Email: anaswarasankeerthanam@gmail.com
     </p>
 
@@ -218,4 +203,3 @@
 </div>
 </body>
 </html>
-
