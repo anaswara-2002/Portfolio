@@ -6,69 +6,93 @@
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
-            background: #ffffff;
-            color: #000000;
-            line-height: 1.5;
+            background-color: #f9fafb;
+            color: #111;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
         .container {
-            width: 900px;
-            margin: 40px auto;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         header {
-            margin-bottom: 30px;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #1f2937;
+            color: #fff;
+            border-bottom: 4px solid #2563eb;
         }
 
-        h1 {
-            text-transform: uppercase;
-            margin-bottom: 6px;
+        header h1 {
+            margin: 0;
+            font-size: 36px;
         }
 
-        .tagline {
+        header p {
+            margin: 10px 0 0;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        section:nth-child(even) {
+            background-color: #f3f4f6;
         }
 
         h2 {
-            margin-top: 32px;
-            margin-bottom: 10px;
-            padding-bottom: 4px;
-            border-bottom: 1px solid #000;
-            font-size: 18px;
+            font-size: 24px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
         }
 
         h3 {
-            margin-top: 18px;
-            margin-bottom: 4px;
+            font-size: 20px;
+            margin-bottom: 6px;
         }
 
-        p {
-            margin: 8px 0;
-            text-align: left;
+        p, li {
+            font-size: 16px;
         }
 
-        .justify {
-            text-align: justify;
+        .project-card {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
         .tech {
             font-style: italic;
-            margin-bottom: 6px;
+            color: #374151;
+            margin-bottom: 10px;
         }
 
         ul {
-            margin: 6px 0 6px 20px;
+            margin-left: 20px;
+            padding-left: 0;
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
         a {
-            color: #0000EE;
+            color: #2563eb;
             text-decoration: none;
         }
 
@@ -77,11 +101,16 @@
         }
 
         footer {
-            margin-top: 50px;
-            padding-top: 10px;
-            border-top: 1px solid #000;
             text-align: center;
-            font-size: 14px;
+            padding: 20px;
+            background-color: #1f2937;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-right: 15px;
         }
     </style>
 </head>
@@ -92,34 +121,33 @@
     <!-- HEADER -->
     <header>
         <h1>Anaswara Anil</h1>
-        <p class="tagline">
-            MSc Computer Science (Information Security & Cyber Forensics)<br>
-            Cybersecurity Fresher | Digital Forensics | Python
-        </p>
+        <p>MSc Computer Science (Information Security & Cyber Forensics) | Cybersecurity Fresher</p>
     </header>
 
     <!-- ABOUT -->
     <section>
         <h2>About Me</h2>
-        <p class="justify">
-            I am a postgraduate student specializing in Information Security and Cyber Forensics, with a strong focus on practical applications. My projects and academic experience reflect hands-on learning in cybersecurity, digital forensics, and secure system development.
+        <p>
+            I am a postgraduate student specializing in Information Security and Cyber Forensics, focusing on hands-on practical projects.
+            My work demonstrates skills in cybersecurity, digital forensics, and secure system development. This portfolio showcases my projects,
+            technical expertise, and relevant experience.
         </p>
     </section>
 
-    <!-- SKILLS -->
+    <!-- TECH SKILLS -->
     <section>
         <h2>Technical Skills</h2>
         <ul>
-            <li><strong>Programming Languages:</strong> Python, C, C++</li>
-            <li><strong>Cybersecurity & Forensic Tools:</strong> Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk</li>
+            <li><strong>Programming:</strong> Python, C, C++</li>
+            <li><strong>Cybersecurity & Forensics Tools:</strong> Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk</li>
             <li><strong>Technologies:</strong> OpenCV, Flask, Git</li>
-            <li><strong>Operating Systems:</strong> Windows, Linux (Kali Linux)</li>
+            <li><strong>OS:</strong> Windows, Linux (Kali)</li>
         </ul>
     </section>
 
     <!-- FRAMEWORKS -->
     <section>
-        <h2>Security Frameworks & Standards</h2>
+        <h2>Frameworks & Standards</h2>
         <ul>
             <li>NIST Cybersecurity Framework (CSF)</li>
             <li>CIS Critical Security Controls</li>
@@ -131,48 +159,46 @@
     <section>
         <h2>Projects</h2>
 
-        <h3>Camera-Based Intrusion Detection System (Face-Based Authorization)</h3>
-        <p class="tech">Python, OpenCV (Haar Cascade), Logging</p>
-        <ul>
-            <li><strong>Objective:</strong> Detect unauthorized access using face recognition.</li>
-            <li><strong>Approach:</strong> Continuous scanning with Haar Cascade, logging all activities.</li>
-            <li><strong>Outcome:</strong> Alerts generated for unauthorized persons; complete log of all scans.</li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">View Repository</a></li>
-        </ul>
+        <div class="project-card">
+            <h3>Camera-Based Intrusion Detection System (Face-Based Authorization)</h3>
+            <p class="tech">Python, OpenCV (Haar Cascade), Logging</p>
+            <ul>
+                <li><strong>Objective:</strong> Detect unauthorized access using face recognition.</li>
+                <li><strong>Approach:</strong> Continuous scanning, logging all activities, alerts for unauthorized persons.</li>
+                <li><strong>Outcome:</strong> Real-time alerts and complete log tracking of all scans.</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">View Repository</a></li>
+            </ul>
+        </div>
 
-        <h3>File Integrity Checker</h3>
-        <p class="tech">Python, SHA-256, JSON</p>
-        <ul>
-            <li><strong>Objective:</strong> Monitor file modifications to ensure integrity.</li>
-            <li><strong>Approach:</strong> Baseline hash creation, periodic hash comparison, reporting changes.</li>
-            <li><strong>Outcome:</strong> Detects additions, deletions, and modifications in monitored files.</li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">View Repository</a></li>
-        </ul>
+        <div class="project-card">
+            <h3>File Integrity Checker</h3>
+            <p class="tech">Python, SHA-256, JSON</p>
+            <ul>
+                <li><strong>Objective:</strong> Monitor file modifications to ensure integrity.</li>
+                <li><strong>Approach:</strong> Baseline hash creation and comparison with current state.</li>
+                <li><strong>Outcome:</strong> Detects additions, deletions, and unauthorized changes.</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">View Repository</a></li>
+            </ul>
+        </div>
 
-        <h3>Complaint Registration Application</h3>
-        <p class="tech">Python, Flask, SQLite</p>
-        <ul>
-            <li><strong>Objective:</strong> Allow users to submit and track complaints digitally.</li>
-            <li><strong>Approach:</strong> Web interface with form handling and SQLite database integration.</li>
-            <li><strong>Outcome:</strong> Structured complaint tracking and backend data management.</li>
-            <li><strong>GitHub:</strong> <em>Add your GitHub link here</em></li>
-        </ul>
+        <div class="project-card">
+            <h3>Complaint Registration Application</h3>
+            <p class="tech">Python, Flask, SQLite</p>
+            <ul>
+                <li><strong>Objective:</strong> Enable digital complaint submission and tracking.</li>
+                <li><strong>Approach:</strong> Web interface with forms and database integration.</li>
+                <li><strong>Outcome:</strong> Structured complaint tracking system.</li>
+                <li><strong>GitHub:</strong> <em>Add your GitHub link here</em></li>
+            </ul>
+        </div>
     </section>
 
     <!-- INTERNSHIP -->
     <section>
         <h2>Internship Experience</h2>
-
-        <p><strong>Cyber Forensics Intern – C-DAC</strong></p>
         <ul>
-            <li>Performed digital forensic analysis using Autopsy and FTK Imager</li>
-            <li>Conducted network and web traffic analysis using Wireshark, Splunk, Burp Suite, and Netreaper</li>
-        </ul>
-
-        <p><strong>Crime Branch Intern (14 Days) – Kerala Police</strong></p>
-        <ul>
-            <li>Observed criminal investigation and documentation workflows</li>
-            <li>Learned digital evidence handling, chain of custody, and evidence preservation</li>
+            <li><strong>Cyber Forensics Intern – C-DAC:</strong> Digital forensic analysis, network/web traffic analysis using Autopsy, FTK, Wireshark, Splunk.</li>
+            <li><strong>Crime Branch Intern – Kerala Police (14 Days):</strong> Observed investigations, learned digital evidence handling, chain of custody, and documentation workflows.</li>
         </ul>
     </section>
 
@@ -189,11 +215,11 @@
     <!-- CONTACT -->
     <section>
         <h2>Contact</h2>
-        <p>
-            GitHub: <a href="https://github.com/anaswara-2002" target="_blank">github.com/anaswara-2002</a><br>
-            LinkedIn: <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">linkedin.com/in/anaswara-anil-512417338</a><br>
-            Email: anaswarasankeerthanam@gmail.com
-        </p>
+        <div class="contact">
+            <a href="https://github.com/anaswara-2002" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">LinkedIn</a>
+            <a href="mailto:anaswarasankeerthanam@gmail.com">Email</a>
+        </div>
     </section>
 
     <footer>
