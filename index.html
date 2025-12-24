@@ -10,7 +10,7 @@
             color: #111;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .container {
@@ -21,59 +21,47 @@
 
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             background-color: #1f2937;
             color: #fff;
-            border-bottom: 4px solid #2563eb;
+            border-bottom: 5px solid #2563eb;
         }
 
         header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 38px;
         }
 
         header p {
-            margin: 10px 0 0;
+            margin: 12px 0 0;
             font-size: 18px;
             font-weight: bold;
         }
 
         section {
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         section:nth-child(even) {
-            background-color: #f3f4f6;
+            background-color: #eef2f7;
         }
 
         h2 {
-            font-size: 24px;
-            border-bottom: 2px solid #2563eb;
-            padding-bottom: 6px;
-            margin-bottom: 20px;
+            font-size: 26px;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
         }
 
         h3 {
             font-size: 20px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            color: #1f2937;
         }
 
-        p, li {
-            font-size: 16px;
-        }
-
-        .project-card {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        p {
+            margin: 10px 0;
+            text-align: justify;
         }
 
         .tech {
@@ -82,9 +70,22 @@
             margin-bottom: 10px;
         }
 
+        .project-card {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
         ul {
             margin-left: 20px;
-            padding-left: 0;
         }
 
         li {
@@ -94,23 +95,27 @@
         a {
             color: #2563eb;
             text-decoration: none;
+            transition: color 0.2s;
         }
 
         a:hover {
+            color: #1d4ed8;
             text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1f2937;
-            color: #fff;
-            margin-top: 40px;
         }
 
         .contact a {
             display: inline-block;
-            margin-right: 15px;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            background-color: #1f2937;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 15px;
         }
     </style>
 </head>
@@ -128,9 +133,9 @@
     <section>
         <h2>About Me</h2>
         <p>
-            I am a postgraduate student specializing in Information Security and Cyber Forensics, focusing on hands-on practical projects.
-            My work demonstrates skills in cybersecurity, digital forensics, and secure system development. This portfolio showcases my projects,
-            technical expertise, and relevant experience.
+            I am a postgraduate student specializing in Information Security and Cyber Forensics, with a strong focus on hands-on practical experience.
+            I explore cybersecurity challenges by developing applications, analyzing digital evidence, and learning defensive and investigative techniques.
+            This portfolio highlights my projects, technical skills, and internship experiences that demonstrate my applied knowledge in the field.
         </p>
     </section>
 
@@ -140,14 +145,14 @@
         <ul>
             <li><strong>Programming:</strong> Python, C, C++</li>
             <li><strong>Cybersecurity & Forensics Tools:</strong> Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk</li>
-            <li><strong>Technologies:</strong> OpenCV, Flask, Git</li>
-            <li><strong>OS:</strong> Windows, Linux (Kali)</li>
+            <li><strong>Technologies:</strong> OpenCV, Flask (basic), Git</li>
+            <li><strong>Operating Systems:</strong> Windows, Linux (Kali)</li>
         </ul>
     </section>
 
     <!-- FRAMEWORKS -->
     <section>
-         <h2>Frameworks & Standards</h2>
+        <h2>Frameworks & Standards</h2>
     <ul>
         <li>
             <strong>NIST Cybersecurity Framework (CSF)</strong> 
@@ -171,42 +176,40 @@
         <div class="project-card">
             <h3>Camera-Based Intrusion Detection System (Face-Based Authorization)</h3>
             <p class="tech">Python, OpenCV (Haar Cascade), Logging</p>
-            <ul>
-                <li><strong>Objective:</strong> Detect unauthorized access using face recognition.</li>
-                <li><strong>Approach:</strong> Continuous scanning, logging all activities, alerts for unauthorized persons.</li>
-                <li><strong>Outcome:</strong> Real-time alerts and complete log tracking of all scans.</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">View Repository</a></li>
-            </ul>
+            <p>
+                Developed a camera-based intrusion detection system that continuously monitors individuals using face detection.
+                The system verifies whether the detected person is authorized and generates alerts for unauthorized access attempts.
+                All scanning activities and intrusion attempts are logged for monitoring and analysis.
+            </p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">View Repository</a></p>
         </div>
 
         <div class="project-card">
             <h3>File Integrity Checker</h3>
             <p class="tech">Python, SHA-256, JSON</p>
-            <ul>
-                <li><strong>Objective:</strong> Monitor file modifications to ensure integrity.</li>
-                <li><strong>Approach:</strong> Baseline hash creation and comparison with current state.</li>
-                <li><strong>Outcome:</strong> Detects additions, deletions, and unauthorized changes.</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">View Repository</a></li>
-            </ul>
+            <p>
+                Implemented a file integrity monitoring tool that establishes a cryptographic hash baseline and detects unauthorized file modifications
+                by comparing current file states with stored hashes. This project emphasizes integrity verification and basic incident detection.
+            </p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">View Repository</a></p>
         </div>
 
         <div class="project-card">
             <h3>Complaint Registration Application</h3>
             <p class="tech">Python, Flask, SQLite</p>
-            <ul>
-                <li><strong>Objective:</strong> Enable digital complaint submission and tracking.</li>
-                <li><strong>Approach:</strong> Web interface with forms and database integration.</li>
-                <li><strong>Outcome:</strong> Structured complaint tracking system.</li>
-            </ul>
+            <p>
+                Designed and developed a web-based complaint registration system that enables users to submit complaints and track records.
+                The project demonstrates backend logic, database integration, and structured data handling.
+            </p>
         </div>
     </section>
 
-    <!-- INTERNSHIP -->
+    <!-- INTERNSHIPS -->
     <section>
         <h2>Internship Experience</h2>
         <ul>
-            <li><strong>Cyber Forensics Intern – C-DAC:</strong> Digital forensic analysis, network/web traffic analysis using Autopsy, FTK, Wireshark, Splunk.</li>
-            <li><strong>Crime Branch Intern – Kerala Police :</strong> Observed investigations, learned digital evidence handling, chain of custody, and documentation workflows.</li>
+            <li><strong>Cyber Forensics Intern – C-DAC:</strong> Digital forensic analysis using Autopsy and FTK Imager; network/web traffic analysis with Wireshark, Splunk, Burp Suite, Netreaper.</li>
+            <li><strong>Crime Branch Intern – Kerala Police:</strong> Observed criminal investigations, learned digital evidence handling, chain of custody, and documentation workflows.</li>
         </ul>
     </section>
 
@@ -230,6 +233,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         © 2025 Anaswara Anil
     </footer>
@@ -238,4 +242,3 @@
 
 </body>
 </html>
-
