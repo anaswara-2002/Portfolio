@@ -6,9 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* ================= THEME VARIABLES ================= */
 :root {
     --bg: #f4f6f8;
-    --text: #111;
+    --text: #0f172a;
     --card: #ffffff;
     --accent: #2563eb;
 }
@@ -20,140 +21,129 @@ body.dark {
     --accent: #38bdf8;
 }
 
-* {
-    box-sizing: border-box;
-}
-
+/* ================= BASE ================= */
 body {
     margin: 0;
     font-family: "Times New Roman", Times, serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.7;
-    transition: background 0.4s, color 0.4s;
+    scroll-behavior: smooth;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
-    padding: 50px 25px;
+    padding: 60px 30px;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+    animation: fadeDown 1s ease forwards;
 }
 
 header h1 {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
-.tagline {
+header p {
     font-size: 18px;
-    letter-spacing: 0.5px;
-    opacity: 0.9;
+    letter-spacing: 1px;
 }
 
-/* THEME TOGGLE */
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--card);
-    border: none;
-    padding: 12px 14px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    z-index: 1000;
-}
-
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 section {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     animation: fadeUp 0.9s ease forwards;
 }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 18px;
-    padding-left: 12px;
+section h2 {
+    font-size: 26px;
     border-left: 6px solid var(--accent);
+    padding-left: 14px;
+    margin-bottom: 25px;
 }
 
-p {
-    text-align: justify;
-}
-
-/* PROJECT CARDS */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.project-card {
+/* ================= CARDS ================= */
+.card {
     background: var(--card);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 28px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+.card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 35px rgba(0,0,0,0.25);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.2);
 }
 
-.project-card h3 {
+.card h3 {
     margin-top: 0;
+    font-size: 22px;
 }
 
 .tech {
     font-style: italic;
-    font-size: 14px;
-    opacity: 0.8;
+    opacity: 0.85;
+    margin-bottom: 10px;
 }
 
-.project-card a {
-    display: inline-block;
-    margin-top: 12px;
+a {
     color: var(--accent);
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* LISTS */
+a:hover {
+    text-decoration: underline;
+}
+
+/* ================= LISTS ================= */
 ul {
-    margin-left: 22px;
+    margin-left: 20px;
 }
 
 li {
     margin-bottom: 8px;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    font-size: 14px;
-    opacity: 0.8;
-    border-top: 1px solid var(--accent);
-    padding-top: 20px;
+/* ================= TOGGLE ================= */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card);
+    border: none;
+    padding: 10px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    z-index: 1000;
 }
 
-/* ANIMATION */
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
@@ -166,89 +156,79 @@ footer {
 
 <header>
     <h1>Anaswara Anil</h1>
-    <p class="tagline">
-        Cybersecurity Fresher | Digital Forensics | Information Security
-    </p>
+    <p>Cybersecurity Fresher | Digital Forensics | Blue Team</p>
 </header>
 
 <section>
 <h2>About Me</h2>
-<p>
-I am a postgraduate student specializing in Information Security and Cyber Forensics, with a strong focus on defensive security, digital investigations, and practical cybersecurity implementations. My approach emphasizes hands-on learning through academic and self-driven projects that simulate real-world security challenges. I am actively building foundational expertise in intrusion detection, forensic analysis, and security monitoring.
+<p style="text-align: justify;">
+I am a postgraduate student specializing in Information Security and Cyber Forensics with a strong interest in defensive security, digital investigations, and real-world incident handling. My focus is on understanding how security controls, logging, and monitoring work together to protect systems. I build projects to translate theory into practice rather than relying only on certifications.
 </p>
-</section>
-
-<section>
-<h2>Technical Skills</h2>
-<ul>
-    <li><strong>Languages:</strong> Python, C, C++</li>
-    <li><strong>Cybersecurity Tools:</strong> Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk</li>
-    <li><strong>Technologies:</strong> OpenCV, Flask (basic), Git</li>
-    <li><strong>Operating Systems:</strong> Windows, Linux (Kali Linux)</li>
-</ul>
-</section>
-
-<section>
-<h2>Frameworks & Standards</h2>
-<ul>
-    <li>NIST Cybersecurity Framework (CSF) – applied conceptually in academic projects</li>
-    <li>CIS Critical Security Controls – baseline security awareness</li>
-    <li>ISO/IEC 27001 – ISMS and policy structure understanding</li>
-</ul>
 </section>
 
 <section>
 <h2>Projects</h2>
 
-<div class="projects">
-
-<div class="project-card">
-<h3>SightSentry – Camera-Based Intrusion Detection</h3>
-<p class="tech">Python, OpenCV (Haar Cascade), Logging</p>
-<p>
-A camera-based intrusion detection system that performs face-based authorization. Authorized individuals are validated, while unauthorized detections trigger alerts. All detection activities are logged for monitoring and forensic review.
+<div class="card">
+<h3>SightSentry – Camera-Based Intrusion Detection System</h3>
+<p class="tech">Python · OpenCV (Haar Cascade) · Logging</p>
+<p style="text-align: justify;">
+A camera-based intrusion detection system that continuously scans individuals using face detection. Authorized users are allowed access, while unauthorized detections trigger alerts and are logged with timestamps. This project demonstrates the application of computer vision in physical security monitoring and audit logging.
 </p>
-<a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">
-View on GitHub →
-</a>
+<p>
+🔗 <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">View on GitHub</a>
+</p>
 </div>
 
-<div class="project-card">
+<div class="card">
 <h3>File Integrity Checker</h3>
-<p class="tech">Python, SHA-256, JSON</p>
-<p>
-A file integrity monitoring tool that establishes cryptographic baselines and detects unauthorized file modifications by comparing current and stored hash values.
+<p class="tech">Python · SHA-256 Hashing · JSON</p>
+<p style="text-align: justify;">
+A file integrity monitoring tool that establishes a cryptographic baseline and detects unauthorized file changes by comparing current hashes with stored values. Useful for integrity verification and basic incident detection scenarios.
 </p>
-<a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">
-View on GitHub →
-</a>
-</div>
-
-<div class="project-card">
-<h3>Complaint Registration Application</h3>
-<p class="tech">Python, Flask, SQLite</p>
 <p>
-A structured web application allowing users to register complaints, store records securely, and manage data using backend logic and database integration.
+🔗 <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">View on GitHub</a>
 </p>
 </div>
 
-</div>
+</section>
+
+<section>
+<h2>Security Frameworks & Standards</h2>
+<ul>
+<li>NIST Cybersecurity Framework (CSF)</li>
+<li>CIS Critical Security Controls</li>
+<li>ISO/IEC 27001 – ISMS Awareness</li>
+</ul>
 </section>
 
 <section>
 <h2>Internship Experience</h2>
+
+<div class="card">
+<h3>Cyber Forensics Intern – C-DAC</h3>
 <ul>
-<li><strong>C-DAC – Cyber Forensics Intern:</strong> Digital forensic analysis using Autopsy and FTK Imager; network analysis using Wireshark, Splunk, Burp Suite</li>
-<li><strong>Kerala Police Crime Branch (14 Days):</strong> Exposure to investigation workflows, digital evidence handling, chain of custody, and legal procedures</li>
+<li>Digital forensic analysis using Autopsy and FTK Imager</li>
+<li>Network and web traffic analysis using Wireshark, Splunk, Burp Suite</li>
 </ul>
+</div>
+
+<div class="card">
+<h3>Crime Branch Intern (14 Days) – Kerala Police</h3>
+<ul>
+<li>Observed investigation and documentation workflows</li>
+<li>Learned chain of custody and digital evidence handling</li>
+</ul>
+</div>
+
 </section>
 
 <section>
 <h2>Contact</h2>
 <p>
-<strong>GitHub:</strong> <a href="https://github.com/anaswara-2002" target="_blank">github.com/anaswara-2002</a><br>
-<strong>LinkedIn:</strong> <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">linkedin.com/in/anaswara-anil-512417338</a><br>
-<strong>Email:</strong> anaswarasankeerthanam@gmail.com
+GitHub: <a href="https://github.com/anaswara-2002" target="_blank">github.com/anaswara-2002</a><br>
+LinkedIn: <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">linkedin.com/in/anaswara-anil-512417338</a><br>
+Email: anaswarasankeerthanam@gmail.com
 </p>
 </section>
 
