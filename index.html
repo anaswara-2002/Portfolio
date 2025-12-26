@@ -2,135 +2,146 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anaswara Anil | Cybersecurity Portfolio</title>
 
 <style>
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-    font-family: "Times New Roman", Times, serif;
-    background-color: #f4f6f8;
-    color: #111;
     margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    background: #f4f6f8;
+    color: #111;
     line-height: 1.7;
 }
 
-/* ---------- HEADER ---------- */
+/* ================= HEADER ================= */
 header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #1f2937, #111827);
-    color: #fff;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: white;
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+.hero h1 {
+    font-size: 48px;
+    letter-spacing: 1.4px;
+    margin-bottom: 12px;
+    animation: fadeDown 1s ease forwards;
 }
 
-.tagline {
+.hero p {
     font-size: 18px;
     font-weight: bold;
-    opacity: 0.9;
-}
-
-/* ---------- CONTAINER ---------- */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-/* ---------- SECTIONS ---------- */
-section {
-    margin-bottom: 60px;
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease forwards;
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.4s;
 }
 
-section:nth-child(2) { animation-delay: 0.1s; }
-section:nth-child(3) { animation-delay: 0.2s; }
-section:nth-child(4) { animation-delay: 0.3s; }
-section:nth-child(5) { animation-delay: 0.4s; }
+/* ================= LAYOUT ================= */
+.container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 60px 20px;
+}
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+section {
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2 {
-    font-size: 26px;
-    border-left: 5px solid #2563eb;
-    padding-left: 12px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    border-left: 6px solid #2563eb;
+    padding-left: 14px;
+    margin-bottom: 26px;
 }
 
-p {
+/* ================= ABOUT ================= */
+.about p {
     text-align: justify;
+    max-width: 900px;
 }
 
-/* ---------- PROJECT CARDS ---------- */
+/* ================= PROJECTS ================= */
 .project-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: white;
+    padding: 34px;
+    border-radius: 14px;
+    margin-bottom: 34px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.project-card h3 {
-    margin-top: 0;
+    transform: translateY(-10px);
+    box-shadow: 0 28px 55px rgba(0,0,0,0.18);
 }
 
 .tech {
     font-style: italic;
     color: #374151;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
+.project-card p {
+    text-align: justify;
+}
+
+/* ================= LINKS ================= */
 a {
     color: #2563eb;
     font-weight: bold;
     text-decoration: none;
+    position: relative;
 }
 
-a:hover {
-    text-decoration: underline;
+a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
 }
 
-/* ---------- LISTS ---------- */
-ul {
-    margin-left: 20px;
+a:hover::after {
+    width: 100%;
 }
 
-li {
-    margin-bottom: 6px;
-}
-
-/* ---------- CONTACT ---------- */
-.contact a {
-    margin-right: 20px;
-}
-
-/* ---------- FOOTER ---------- */
+/* ================= FOOTER ================= */
 footer {
+    background: #020617;
+    color: white;
     text-align: center;
-    padding: 25px;
-    background-color: #111827;
-    color: #fff;
+    padding: 30px;
     font-size: 14px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
@@ -138,107 +149,80 @@ footer {
 <body>
 
 <header>
-    <h1>Anaswara Anil</h1>
-    <p class="tagline">
-        Cybersecurity Fresher | Digital Forensics | Hands-on Security Projects
-    </p>
+    <div class="hero">
+        <h1>Anaswara Anil</h1>
+        <p>Cybersecurity Fresher | SOC & Digital Forensics Enthusiast</p>
+    </div>
 </header>
 
 <div class="container">
 
-<section>
+<section class="about">
     <h2>About Me</h2>
     <p>
-        I am a postgraduate student specializing in Information Security and Cyber Forensics, with a strong
-        focus on practical learning through real-world projects. My interests lie in security monitoring,
-        digital investigations, and defensive cybersecurity. This portfolio highlights my applied knowledge
-        and hands-on experience.
+        I am a postgraduate student specializing in Information Security and Cyber Forensics with hands-on experience in
+        intrusion detection, digital forensics tools, and network security analysis. My focus lies in understanding real-world
+        attack scenarios, analyzing system behavior, and implementing security-driven solutions rather than theoretical-only learning.
     </p>
-</section>
-
-<section>
-    <h2>Technical Skills</h2>
-    <ul>
-        <li><strong>Programming:</strong> Python, C, C++</li>
-        <li><strong>Security & Forensics Tools:</strong> Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk</li>
-        <li><strong>Technologies:</strong> OpenCV, Flask (basic), Git</li>
-        <li><strong>Operating Systems:</strong> Windows, Linux (Kali Linux)</li>
-    </ul>
-</section>
-
-<section>
-   <h2>Frameworks & Standards</h2>
-<ul>
-    <li>
-        <strong>NIST Cybersecurity Framework (CSF)</strong> – 
-    </li>
-    <li>
-        <strong>CIS Critical Security Controls</strong> – Conceptual understanding of
-        baseline security controls and system hardening practices
-    </li>
-    <li>
-        <strong>ISO/IEC 27001</strong> – Awareness of Information Security Management System
-        (ISMS) concepts and security policy structure
-    </li>
-</ul>
 </section>
 
 <section>
     <h2>Projects</h2>
 
     <div class="project-card">
-        <h3>Camera-Based Intrusion Detection System</h3>
-        <p class="tech">Python, OpenCV (Haar Cascade), Logging</p>
+        <h3>Intrusion Detection System (Camera-Based)</h3>
+        <p class="tech">Python, OpenCV, Haar Cascade</p>
         <p>
-            Built a face-based intrusion detection system that continuously monitors camera input,
-            verifies authorized individuals, triggers alerts for unauthorized access, and logs all
-            scanning activities for audit and analysis.
-        </p>
-        <p>
-            <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">
-                View on GitHub →
-            </a>
+            Developed a camera-based intrusion detection system that identifies unauthorized human presence using real-time
+            video processing. The system detects motion, triggers alerts, and enhances physical security monitoring in restricted environments.
         </p>
     </div>
 
     <div class="project-card">
-        <h3>File Integrity Checker</h3>
-        <p class="tech">Python, SHA-256 Hashing, JSON</p>
+        <h3>File Integrity Monitoring System</h3>
+        <p class="tech">Python, Hashing, JSON</p>
         <p>
-            Developed a file integrity monitoring tool that creates a cryptographic baseline and detects
-            unauthorized file changes by comparing real-time hashes against stored values.
-        </p>
-        <p>
-            <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">
-                View on GitHub →
-            </a>
+            Designed a file integrity checker that creates cryptographic hash baselines and continuously monitors files for
+            unauthorized modifications, ensuring system integrity and early detection of tampering attempts.
         </p>
     </div>
-
 </section>
 
 <section>
-    <h2>Internship Experience</h2>
-    <ul>
-        <li><strong>C-DAC (Cyber Forensics Intern):</strong> Digital forensic analysis, traffic inspection, and security tool usage.</li>
-        <li><strong>Kerala Police – Crime Branch :</strong> Exposure to criminal investigations, digital evidence handling, and chain of custody.</li>
-    </ul>
+    <h2>Skills & Tools</h2>
+    <p>
+        Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk, Process Hacker, Kleopatra, Python, Linux, Digital Forensics,
+        Network Security, Incident Analysis.
+    </p>
 </section>
 
 <section>
     <h2>Contact</h2>
-    <p class="contact">
-        <a href="https://github.com/anaswara-2002" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">LinkedIn</a>
-        <a href="mailto:anaswarasankeerthanam@gmail.com">Email</a>
+    <p>
+        GitHub: <a href="https://github.com/" target="_blank">github.com/yourprofile</a><br>
+        LinkedIn: <a href="https://linkedin.com/" target="_blank">linkedin.com/in/yourprofile</a>
     </p>
 </section>
 
 </div>
 
 <footer>
-    © 2025 Anaswara Anil
+    © 2025 Anaswara Anil | Cybersecurity Portfolio
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.15 });
+
+sections.forEach(section => observer.observe(section));
+</script>
 
 </body>
 </html>
