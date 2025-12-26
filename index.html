@@ -1,275 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Anaswara Anil | Cybersecurity Portfolio</title>
-    <style>
-        body {
-            font-family: "Times New Roman", Times, serif;
-            background-color: #f9fafb;
-            color: #111;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #1f2937;
-            color: #fff;
-            border-bottom: 5px solid #2563eb;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 38px;
-        }
-
-        header p {
-            margin: 12px 0 0;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        section {
-            padding: 50px 20px;
-        }
-
-        section:nth-child(even) {
-            background-color: #eef2f7;
-        }
-
-        h2 {
-            font-size: 26px;
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 8px;
-            margin-bottom: 25px;
-        }
-
-        h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-            color: #1f2937;
-        }
-
-        p {
-            margin: 10px 0;
-            text-align: justify;
-        }
-
-        .tech {
-            font-style: italic;
-            color: #374151;
-            margin-bottom: 10px;
-        }
-
-        .project-card {
-            background-color: #fff;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.25s, box-shadow 0.25s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        a {
-            color: #2563eb;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
-
-        .contact a {
-            display: inline-block;
-            margin-right: 20px;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px 10px;
-            background-color: #1f2937;
-            color: #fff;
-            margin-top: 40px;
-            font-size: 15px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-
-    <!-- HEADER -->
-<header>
-    <h1>Anaswara Anil</h1>
-    <p class="tagline">
-        
-    </p>
-</header>
+<meta charset="UTF-8">
+<title>Anaswara Anil | Cybersecurity Portfolio</title>
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f4f6f8;
+    color: #111;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ---------- HEADER ---------- */
 header {
-    text-align: center; /* Center all content inside header */
-    padding: 50px 20px;
-    background-color: #1f2937;
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #1f2937, #111827);
     color: #fff;
-    border-bottom: 5px solid #2563eb;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 38px;
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-header .tagline {
-    margin-top: 12px;
+.tagline {
     font-size: 18px;
     font-weight: bold;
+    opacity: 0.9;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.1s; }
+section:nth-child(3) { animation-delay: 0.2s; }
+section:nth-child(4) { animation-delay: 0.3s; }
+section:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 26px;
+    border-left: 5px solid #2563eb;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+/* ---------- PROJECT CARDS ---------- */
+.project-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.tech {
+    font-style: italic;
+    color: #374151;
+    margin-bottom: 12px;
+}
+
+a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- LISTS ---------- */
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ---------- CONTACT ---------- */
+.contact a {
+    margin-right: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #111827;
+    color: #fff;
+    font-size: 14px;
 }
 </style>
-       <!-- HEADER -->
-    <!-- ABOUT -->
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am a postgraduate student specializing in Information Security and Cyber Forensics, with a strong focus on hands-on practical experience.
-            I explore cybersecurity challenges by developing applications, analyzing digital evidence, and learning defensive and investigative techniques.
-            This portfolio highlights my projects, technical skills, and internship experiences that demonstrate my applied knowledge in the field.
-        </p>
-    </section>
+</head>
 
-    <!-- TECH SKILLS -->
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Programming:</strong> Python, C, C++</li>
-            <li><strong>Cybersecurity & Forensics Tools:</strong> Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk</li>
-            <li><strong>Technologies:</strong> OpenCV, Flask (basic), Git</li>
-            <li><strong>Operating Systems:</strong> Windows, Linux (Kali)</li>
-        </ul>
-    </section>
+<body>
 
-    <!-- FRAMEWORKS -->
-    <section>
-        <h2>Frameworks & Standards</h2>
+<header>
+    <h1>Anaswara Anil</h1>
+    <p class="tagline">
+        Cybersecurity Fresher | Digital Forensics | Hands-on Security Projects
+    </p>
+</header>
+
+<div class="container">
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a postgraduate student specializing in Information Security and Cyber Forensics, with a strong
+        focus on practical learning through real-world projects. My interests lie in security monitoring,
+        digital investigations, and defensive cybersecurity. This portfolio highlights my applied knowledge
+        and hands-on experience.
+    </p>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
     <ul>
-        <li>
-            <strong>NIST Cybersecurity Framework (CSF)</strong> 
-        </li>
-        <li>
-            <strong>CIS Critical Security Controls</strong> – Conceptual understanding of
-            baseline security controls and system hardening practices
-        </li>
-        <li>
-            <strong>ISO/IEC 27001</strong> – Awareness of Information Security Management System
-            (ISMS) concepts and security policy structure
-        </li>
+        <li><strong>Programming:</strong> Python, C, C++</li>
+        <li><strong>Security & Forensics Tools:</strong> Nmap, Wireshark, Autopsy, FTK Imager, Burp Suite, Splunk</li>
+        <li><strong>Technologies:</strong> OpenCV, Flask (basic), Git</li>
+        <li><strong>Operating Systems:</strong> Windows, Linux (Kali Linux)</li>
     </ul>
+</section>
 
-    </section>
+<section>
+   <h2>Frameworks & Standards</h2>
+<ul>
+    <li>
+        <strong>NIST Cybersecurity Framework (CSF)</strong> – 
+    </li>
+    <li>
+        <strong>CIS Critical Security Controls</strong> – Conceptual understanding of
+        baseline security controls and system hardening practices
+    </li>
+    <li>
+        <strong>ISO/IEC 27001</strong> – Awareness of Information Security Management System
+        (ISMS) concepts and security policy structure
+    </li>
+</ul>
+</section>
 
-    <!-- PROJECTS -->
-    <section>
-        <h2>Projects</h2>
+<section>
+    <h2>Projects</h2>
 
-        <div class="project-card">
-            <h3>Camera-Based Intrusion Detection System (Face-Based Authorization)</h3>
-            <p class="tech">Python, OpenCV (Haar Cascade), Logging</p>
-            <p>
-                Developed a camera-based intrusion detection system that continuously monitors individuals using face detection.
-                The system verifies whether the detected person is authorized and generates alerts for unauthorized access attempts.
-                All scanning activities and intrusion attempts are logged for monitoring and analysis.
-            </p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">View Repository</a></p>
-        </div>
+    <div class="project-card">
+        <h3>Camera-Based Intrusion Detection System</h3>
+        <p class="tech">Python, OpenCV (Haar Cascade), Logging</p>
+        <p>
+            Built a face-based intrusion detection system that continuously monitors camera input,
+            verifies authorized individuals, triggers alerts for unauthorized access, and logs all
+            scanning activities for audit and analysis.
+        </p>
+        <p>
+            <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">
+                View on GitHub →
+            </a>
+        </p>
+    </div>
 
-        <div class="project-card">
-            <h3>File Integrity Checker</h3>
-            <p class="tech">Python, SHA-256, JSON</p>
-            <p>
-                Implemented a file integrity monitoring tool that establishes a cryptographic hash baseline and detects unauthorized file modifications
-                by comparing current file states with stored hashes. This project emphasizes integrity verification and basic incident detection.
-            </p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">View Repository</a></p>
-        </div>
+    <div class="project-card">
+        <h3>File Integrity Checker</h3>
+        <p class="tech">Python, SHA-256 Hashing, JSON</p>
+        <p>
+            Developed a file integrity monitoring tool that creates a cryptographic baseline and detects
+            unauthorized file changes by comparing real-time hashes against stored values.
+        </p>
+        <p>
+            <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">
+                View on GitHub →
+            </a>
+        </p>
+    </div>
 
-        <div class="project-card">
-            <h3>Complaint Registration Application</h3>
-            <p class="tech">Python, Flask, SQLite</p>
-            <p>
-                Designed and developed a web-based complaint registration system that enables users to submit complaints and track records.
-                The project demonstrates backend logic, database integration, and structured data handling.
-            </p>
-        </div>
-    </section>
+</section>
 
-    <!-- INTERNSHIPS -->
-    <section>
-        <h2>Internship Experience</h2>
-        <ul>
-            <li><strong>Cyber Forensics Intern – C-DAC:</strong> Digital forensic analysis using Autopsy and FTK Imager; network/web traffic analysis with Wireshark, Splunk, Burp Suite, Netreaper.</li>
-            <li><strong>Crime Branch Intern – Kerala Police:</strong> Observed criminal investigations, learned digital evidence handling, chain of custody, and documentation workflows.</li>
-        </ul>
-    </section>
+<section>
+    <h2>Internship Experience</h2>
+    <ul>
+        <li><strong>C-DAC (Cyber Forensics Intern):</strong> Digital forensic analysis, traffic inspection, and security tool usage.</li>
+        <li><strong>Kerala Police – Crime Branch :</strong> Exposure to criminal investigations, digital evidence handling, and chain of custody.</li>
+    </ul>
+</section>
 
-    <!-- CERTIFICATIONS -->
-    <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>CompTIA Security+</li>
-            <li>Google Cybersecurity Professional Certificate</li>
-            <li>Microsoft Cybersecurity Analyst</li>
-        </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section>
-        <h2>Contact</h2>
-        <div class="contact">
-            <a href="https://github.com/anaswara-2002" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">LinkedIn</a>
-            <a href="mailto:anaswarasankeerthanam@gmail.com">Email</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Anaswara Anil
-    </footer>
+<section>
+    <h2>Contact</h2>
+    <p class="contact">
+        <a href="https://github.com/anaswara-2002" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/anaswara-anil-512417338" target="_blank">LinkedIn</a>
+        <a href="mailto:anaswarasankeerthanam@gmail.com">Email</a>
+    </p>
+</section>
 
 </div>
 
+<footer>
+    © 2025 Anaswara Anil
+</footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
