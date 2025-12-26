@@ -37,21 +37,31 @@ body {
     padding: 60px 30px;
 }
 
-/* ================= HEADER ================= */
-header {
+/* ================= HERO SECTION ================= */
+.hero {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    padding: 120px 20px;
     text-align: center;
-    margin-bottom: 80px;
-    animation: fadeDown 1s ease forwards;
 }
 
-header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+body.dark .hero {
+    background: #020617;
 }
 
-header p {
-    font-size: 18px;
+.hero-content {
+    animation: heroReveal 1.2s ease forwards;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
     letter-spacing: 1px;
+    opacity: 0.95;
 }
 
 /* ================= SECTIONS ================= */
@@ -145,6 +155,11 @@ footer {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes heroReveal {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 </style>
 </head>
 
@@ -152,17 +167,20 @@ footer {
 
 <button id="themeToggle" class="theme-toggle">🌙</button>
 
-<div class="container">
-
-<header>
-    <h1>Anaswara Anil</h1>
-    <p>Cybersecurity Fresher | Digital Forensics | Blue Team</p>
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>Anaswara Anil</h1>
+        <p>Cybersecurity Fresher | Digital Forensics | Blue Team</p>
+    </div>
 </header>
+
+<div class="container">
 
 <section>
 <h2>About Me</h2>
 <p style="text-align: justify;">
-I am a postgraduate student specializing in Information Security and Cyber Forensics with a strong interest in defensive security, digital investigations, and real-world incident handling. My focus is on understanding how security controls, logging, and monitoring work together to protect systems. I build projects to translate theory into practice rather than relying only on certifications.
+I am a postgraduate student specializing in Information Security and Cyber Forensics with a strong interest in defensive security, digital investigations, and real-world incident handling. I focus on translating theoretical security concepts into practical systems through hands-on projects and continuous learning.
 </p>
 </section>
 
@@ -173,7 +191,7 @@ I am a postgraduate student specializing in Information Security and Cyber Foren
 <h3>SightSentry – Camera-Based Intrusion Detection System</h3>
 <p class="tech">Python · OpenCV (Haar Cascade) · Logging</p>
 <p style="text-align: justify;">
-A camera-based intrusion detection system that continuously scans individuals using face detection. Authorized users are allowed access, while unauthorized detections trigger alerts and are logged with timestamps. This project demonstrates the application of computer vision in physical security monitoring and audit logging.
+A camera-based intrusion detection system that continuously scans individuals using face detection. Authorized users are allowed access, while unauthorized detections trigger alerts and are logged with timestamps. Demonstrates physical security monitoring and audit logging.
 </p>
 <p>
 🔗 <a href="https://github.com/anaswara-2002/SightSentry-an-Intrusion-Detection-System" target="_blank">View on GitHub</a>
@@ -184,7 +202,7 @@ A camera-based intrusion detection system that continuously scans individuals us
 <h3>File Integrity Checker</h3>
 <p class="tech">Python · SHA-256 Hashing · JSON</p>
 <p style="text-align: justify;">
-A file integrity monitoring tool that establishes a cryptographic baseline and detects unauthorized file changes by comparing current hashes with stored values. Useful for integrity verification and basic incident detection scenarios.
+A file integrity monitoring tool that establishes a cryptographic baseline and detects unauthorized file changes by comparing current hashes with stored values.
 </p>
 <p>
 🔗 <a href="https://github.com/anaswara-2002/File-Integrity-Checker" target="_blank">View on GitHub</a>
@@ -216,7 +234,7 @@ A file integrity monitoring tool that establishes a cryptographic baseline and d
 <div class="card">
 <h3>Crime Branch Intern (14 Days) – Kerala Police</h3>
 <ul>
-<li>Observed investigation and documentation workflows</li>
+<li>Observed investigation workflows and documentation</li>
 <li>Learned chain of custody and digital evidence handling</li>
 </ul>
 </div>
